@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reconocimiento de Gestos</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; padding: 20px; }
+        h1 { color: #333; }
+        #recognizedText { font-size: 24px; font-weight: bold; margin-top: 20px; }
+    </style>
+    <script>
+        function updateText() {
+            fetch("http://127.0.0.1:5000/get_text")  // Solicitar el texto acumulado a Flask
+                .then(response => response.json())  // Convertir la respuesta en JSON
+                .then(data => {
+                    document.getElementById("recognizedText").innerText = data.current_text;
+                })
+                .catch(error => console.error("Error al obtener el texto:", error));
+        }
+
+        setInterval(updateText, 1000);  // Actualizar cada 1 segundo
+    </script>
+</head>
+<body>
+    <h1>Texto Reconocido</h1>
+    <p id="recognizedText">Esperando gestos...</p>
+</body>
+</html>
