@@ -1,0 +1,155 @@
+/* Contenedor principal */
+.home-container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 140px 20px 60px;
+    text-align: center;
+    color: #222;
+  }
+  
+  /* Ya tienes esta parte: */
+  .intro h1 {
+    font-size: 2.6rem;
+    margin-bottom: 24px; /* antes 16px */
+    color: #6610f2;
+  }
+  
+  .intro p {
+    font-size: 1.2rem;
+    max-width: 800px; /* antes 700px */
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  /* --- ¿Qué aprenderás? --- */
+  .feature-section {
+    margin-top: 30px;
+    margin-bottom: 80px;
+  }
+  
+  .feature-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #6610f2;
+  }
+  
+  .feature-section ul {
+    list-style: none;
+    padding: 0;
+    margin: auto;
+    max-width: 600px;
+    text-align: left;
+    margin-bottom: 120px;
+  }
+  
+  .feature-section li {
+    padding: 10px 0;
+    font-size: 1.1rem;
+    display:flex;
+  }
+  
+  /* --- ¿Cómo funciona? --- */
+  .steps-section {
+    margin-top: 40px;
+  }
+  
+  .steps-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+    color: #6610f2;
+  }
+  
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .step {
+    max-width: 300px;
+  }
+  
+  .step h3 {
+    color: #6610f2;
+    margin-bottom: 10px;
+  }
+  
+  @media (min-width: 768px) {
+    .steps {
+      flex-direction: row;
+      text-align: center;
+    }
+  }
+  
+  /* --- Frase final --- */
+  .quote-section {
+    margin-top: 80px;
+  }
+  
+  .quote-section blockquote {
+    font-style: italic;
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: auto;
+    color: #444;
+  }
+  
+  .quote-section span {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.95rem;
+    color: #777;
+  }
+
+  .fade-in-section {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease-out;
+    will-change: opacity, transform;
+  }
+  
+  .fade-in-section.visible {
+    opacity: 1;
+    transform: none;
+  }
+  
+  .feature-section,
+.steps-section,
+.quote-section {
+  margin-top: 80px;
+  padding-top: 40px;
+  margin-bottom: 40px;
+}
+
+.steps {
+  gap: 60px; /* más separación entre bloques */
+}
+
+.step p {
+  line-height: 1.6;
+}
+
+.step {
+    margin-bottom: 20px;
+  }
+  
+  .detection-indicator {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    margin: 8px;
+    background-color: #ccc;
+    animation: blink 1s infinite;
+  }
+  .detecting {
+    background-color: #f39c12;
+  }
+  
+  @keyframes blink {
+    0%, 100% { opacity: 1 }
+    50% { opacity: 0.5 }
+  }
+  

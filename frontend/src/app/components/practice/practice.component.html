@@ -1,0 +1,35 @@
+<div class="practice-layout">
+  <!-- Cámara -->
+  <div class="camera-container">
+    <video #video autoplay muted playsinline></video>
+
+    <!-- Tips debajo de la cámara -->
+    <div class="tips-box">
+      <h3>💡 Consejo:</h3>
+      <p>{{ currentTip }}</p>
+    </div>
+  </div>
+
+  <!-- Contenido de texto -->
+  <div class="text-container">
+    <h2>Texto detectado:</h2>
+    <div class="output">{{ detectedText }}</div>
+
+    <div class="status">⏳ Detectando gesto...</div>
+
+    <!-- Frase separada en palabras -->
+    <div class="sentence-box mt-4" *ngIf="words.length > 0">
+      <h3>Palabras detectadas:</h3>
+      <ul>
+        <li *ngFor="let word of words">{{ word }}</li>
+      </ul>
+    </div>
+
+    <!-- Botón para reiniciar todo -->
+    <button class="btn-restart" (click)="clearAll()">Reiniciar frase</button>
+
+
+    <!-- Indicador visual de detección -->
+    <div class="detection-indicator" [class.detecting]="isDetecting"></div>
+  </div>
+</div>

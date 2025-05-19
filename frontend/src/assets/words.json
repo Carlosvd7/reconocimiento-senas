@@ -1,0 +1,38 @@
+{
+  "easy": [
+    "sol",
+    "pan",
+    "casa",
+    "flor",
+    "mesa",
+    "gato",
+    "tren",
+    "mano",
+    "luna",
+    "libro"
+  ],
+  "medium": [
+    "colegio",
+    "naranja",
+    "amigo",
+    "pelota",
+    "ventana",
+    "montaña",
+    "caballo",
+    "estrella",
+    "familia",
+    "mochila"
+  ],
+  "hard": [
+    "albaricoque",
+    "electricidad",
+    "mariposa",
+    "conocimiento",
+    "computadora",
+    "felicidad",
+    "arquitectura",
+    "fotografía",
+    "supermercado",
+    "biotecnología"
+  ]
+}

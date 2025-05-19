@@ -1,0 +1,59 @@
+<div class="home-container">
+  <!-- Sección de bienvenida -->
+  <section class="intro">
+    <h1>Aprende las letras en lengua de signos</h1>
+    <p>
+      La Lengua de Signos Española (LSE) es una lengua visual y gestual utilizada por las personas sordas en España.
+      Esta app te ayudará a aprender, practicar y seguir tu progreso de forma interactiva y visual.
+    </p>
+  </section>
+
+  <!-- ¿Qué aprenderás? -->
+  <section class="feature-section">
+    <h2>¿Qué aprenderás aquí?</h2>
+    <ul>
+      <li>👐 El alfabeto completo en LSE.</li>
+      <li>🧠 Ejercicios para practicar reconocimiento de letras.</li>
+      <li>📊 Seguimiento visual de tu progreso.</li>
+      <li>🎓 Recurso útil para estudiantes, docentes y familias.</li>
+    </ul>
+  </section>
+
+  <!-- ¿Cómo funciona? -->
+  <section class="intro fade-in-section">
+    <h2>¿Cómo funciona?</h2>
+    <div class="steps">
+      <div class="step">
+        <h3>1. Aprende</h3>
+        <p>Consulta las señas con sus imágenes y letras correspondientes.</p>
+      </div>
+      <div class="step">
+        <h3>2. Practica</h3>
+        <p>Responde preguntas para afianzar lo aprendido.</p>
+      </div>
+      <div class="step">
+        <h3>3. Progresa</h3>
+        <p>Visualiza tu avance y mejora con cada sesión.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cita final -->
+  <section class="intro fade-in-section">
+    <blockquote>
+      “La lengua de signos no es solo comunicación, es identidad, cultura y comunidad.”  
+      <span>— Comunidad Sorda Española</span>
+    </blockquote>
+  </section>
+
+  <!-- Alfabeto visual -->
+  <section class="grid">
+    <div *ngFor="let letter of letters" class="card">
+      <h3>{{ letter.char }}</h3>
+      <img [src]="letter.imageUrl" alt="Letra {{ letter.char }}">
+    </div>
+  </section>
+
+  
+
+</div>
